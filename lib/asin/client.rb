@@ -252,7 +252,7 @@ module ASIN
       url = "http://#{Configuration.host}#{PATH}?#{signed}"
       log(:info, "performing rest call to url='#{url}'")
 
-      response = HTTPI.get(url)
+      response = Net::HTTP.get(URI.parse(url))
       if response.code == 200
         # force utf-8 chars, works only on 1.9 string
         resp = response.body
