@@ -253,7 +253,7 @@ module ASIN
       log(:info, "performing rest call to url='#{url}'")
 
       response = Net::HTTP.get_response(URI.parse(url.to_s))
-      if response.code == 200
+      if response.code == "200"
         # force utf-8 chars, works only on 1.9 string
         resp = response.body
         resp = resp.force_encoding('UTF-8') if resp.respond_to? :force_encoding
