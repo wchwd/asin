@@ -1,3 +1,7 @@
+## 2.0.2
+
+* changes from Hashie::Rash to Hashie::SCHash, because Hashie added its own Rash class that conflicted with the Rash gem.
+
 ## 2.0.1
 
 * get rid of OpenSSL deprecation (davelacy) https://github.com/phoet/asin/pull/36
